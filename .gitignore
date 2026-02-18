@@ -2,6 +2,7 @@
 *.parquet
 *.zip
 *.duckdb
+!scr_database.duckdb
 *.db
 *.sqlite
 data/
