@@ -1,6 +1,6 @@
-pandas==2.2.0
-requests==2.31.0
-pyarrow==15.0.0
-dbt-duckdb==1.7.2
+pandas>=2.0.0
+requests
+pyarrow
+dbt-duckdb
 streamlit>=1.36.0
 plotly
