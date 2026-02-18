@@ -1,0 +1,7 @@
+dbt_scr:
+  outputs:
+    dev:
+      type: duckdb
+      path: /workspace/data/scr_database.duckdb
+      threads: 4
+  target: dev

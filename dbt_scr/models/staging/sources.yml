@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_scr
+    description: "Ficheiros em formato Parquet extraídos do portal de Dados Abertos do Banco Central."
+    tables:
+      - name: scr_dados_anuais
+        description: "Dados mensais agregados de operações de crédito."
+        meta:
+          external_location: "read_parquet('/workspace/data/raw/*.parquet')"

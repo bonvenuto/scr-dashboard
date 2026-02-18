@@ -1,0 +1,130 @@
+version: 2
+
+models:
+  - name: mart_scr_macro_tendencias
+    description: "Tabela agregada com os principais KPIs macroeconômicos de crédito ao longo do tempo."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: carteira_ativa_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR."
+      - name: carteira_inadimplida_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: ativo_problematico_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: indice_inadimplencia_perc
+        description: "Percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: indice_ativo_problematico_perc
+        description: "Percentual da carteira ativa que está com classificada como risco E até H."
+
+  - name: mart_scr_geografico_uf
+    description: "Agregação da carteira e inadimplência por Unidade da Federação para análises geoespaciais."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: sigla_uf
+        description: "Unidade Federativa onde aquele crédito foi originado."
+      - name: carteira_ativa_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR."
+      - name: carteira_inadimplida_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: ativo_problematico_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: indice_inadimplencia_perc
+        description: "Percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: indice_ativo_problematico_perc
+        description: "Percentual da carteira ativa que está com classificada como risco E até H."
+
+  - name: mart_scr_bignumbers
+    description: "Agregação da carteira e inadimplência para acompanhamento dos grandes números e suas variações."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: carteira_ativa_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR."
+      - name: carteira_inadimplida_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: ativo_problematico_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: indice_inadimplencia_perc
+        description: "Percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: indice_ativo_problematico_perc
+        description: "Percentual da carteira ativa que está com classificada como risco E até H."
+      - name: variacao_carteira_ativa_total
+        description: "Variação do valor da carteira ativa de crédito declarada ao SCR."
+      - name: variacao_carteira_inadimplida_total
+        description: "Variação do valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: variacao_ativo_problematico_total
+        description: "Variação do valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: variacao_indice_inadimplencia_perc
+        description: "Variação do percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: variacao_indice_ativo_problematico_perc
+        description: "Variação do percentual da carteira ativa que está com classificada como risco E até H."
+
+  - name: mart_scr_perfil_endividamento
+    description: "Visão do perfil de endividamento (curto vs longo prazo) segmentado por faixa de rendimento (PF)."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: tipo_cliente
+        description: "Marcação de cliente PF ou PJ."
+      - name: faixa_rendimento_porte
+        description: "Faixa de renda ou faturamento."
+      - name: total_curto_prazo
+        description: "Valor da carteira ativa de crédito declarada ao SCR com vencimento até 90 dias."
+      - name: total_longo_prazo
+        description: "Valor da carteira ativa de crédito declarada ao SCR com vencimento acima 360 dias."
+
+  - name: mart_scr_modalidade
+    description: "Agregação da carteira e inadimplência por modalidade do crédito fornecido."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: modalidade_credito
+        description: "Classificação do SCR quanto a natureza do crédito informado."
+      - name: carteira_ativa_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR."
+      - name: carteira_inadimplida_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: ativo_problematico_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: indice_inadimplencia_perc
+        description: "Percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: indice_ativo_problematico_perc
+        description: "Percentual da carteira ativa que está com classificada como risco E até H."
+
+  - name: mart_scr_tipo_cliente
+    description: "Agregação da carteira e inadimplência por tipo de cliente PF ou PJ."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: tipo_cliente
+        description: "Marcação de cliente PF ou PJ."
+      - name: carteira_ativa_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR."
+      - name: carteira_inadimplida_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: ativo_problematico_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: indice_inadimplencia_perc
+        description: "Percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: indice_ativo_problematico_perc
+        description: "Percentual da carteira ativa que está com classificada como risco E até H."
+
+  - name: mart_scr_tipo_cliente
+    description: "Agregação da carteira e inadimplência por natureza da ocupação."
+    columns:
+      - name: data_referencia
+        description: "Data de fechamento da carteira de crédito."
+      - name: natureza_ocupacao
+        description: "Classificação da natureza da ocupação do cliente."
+      - name: carteira_ativa_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR."
+      - name: carteira_inadimplida_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR com mais de 90 dias de atraso."
+      - name: ativo_problematico_total
+        description: "Valor da carteira ativa de crédito declarada ao SCR classificadas como risco E até H."
+      - name: indice_inadimplencia_perc
+        description: "Percentual da carteira ativa que está com parcelas em atraso há mais de 90 dias."
+      - name: indice_ativo_problematico_perc
+        description: "Percentual da carteira ativa que está com classificada como risco E até H."
